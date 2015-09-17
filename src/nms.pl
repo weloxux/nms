@@ -40,12 +40,12 @@ sub makepage { # Build a page
 	if (!($_[0] eq ".") and !($_[0] eq "..")) {
 		print "Building page ${_[0]}\n";
 		open(my $page, "<", FILE_PAGES . "/${_[0]}") or die "Error reading file ${_[0]} $!\n";
-		my @page = <$page>;
+		my $page = <$page>;
 
 		if (FILE_LANGUAGE == 'soy') {
-			my $html = soy2html(@page);
+			my $html = soy2html($page);
 		} elsif (FILE_LANGUAGE == 'markdown') {
-			my $html = md2html(@page);
+			my $html = md2html($page);
 		}
 
 		writefile($html, $_[0]);
@@ -53,7 +53,7 @@ sub makepage { # Build a page
 }
 
 sub soy2html {
-
+	my $soy = $_[0]
 }
 
 sub md2html { #TODO: This
@@ -63,6 +63,7 @@ sub md2html { #TODO: This
 sub writefile {
 	open(my $outpage, ">", FILE_PAGES . "/${_[1]}") or die "Error writing to file ${_[1]} $!\n";
 	print $outpage $_[0];
+	close($outpage);
 }
 
 # Program execution starts here
