@@ -1,4 +1,4 @@
-#/usr/bin/perl6
+#/usr/bin/perl
 # This file defines the configuration for your wiki
 
 # Look and feel
