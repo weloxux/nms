@@ -69,5 +69,4 @@ sub writefile {
 # Program execution starts here
 determinetype();
 checkpages();
-my @pages = getpages();
-build(@pages);
+build(getpages());
