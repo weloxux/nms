@@ -1,0 +1,7 @@
+# Ignore all pages
+*.soy
+*.html
+*.md
+
+# Except for the default home
+!home.soy
