@@ -1,10 +1,8 @@
 # nms
-nms is a locally updated blogging platform.
+nms is a locally updated content management system.
 
 ## Features
 None yet lol
 
 ## Planned features
 * Support for markdown, html and soy (nms's own markup language).
-* Permanent links to seperate articles.
-* Finite number of posts per page.
